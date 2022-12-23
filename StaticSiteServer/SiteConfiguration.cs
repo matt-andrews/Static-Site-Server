@@ -17,7 +17,7 @@ namespace StaticSiteServer
         {
             ContentRoot = Path.GetFullPath(Path.Combine(
                 configuration.GetValue("AzureWebJobsScriptRoot", string.Empty),
-                configuration.GetValue("CONTENT_ROOT", "www")));
+                configuration.GetValue("CONTENT_ROOT", "wwwroot")));
             DefaultPage = configuration.GetValue("DEFAULT_PAGE", "index.html");
         }
     }
