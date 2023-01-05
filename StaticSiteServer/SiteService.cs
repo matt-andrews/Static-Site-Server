@@ -30,7 +30,7 @@ namespace StaticSiteServer
                 if (File.Exists(filePath))
                 {
                     var stream = File.OpenRead(filePath);
-                    _headerService.AddHeadersToRequest(req, filePath);
+                    _headerService.AddHeadersToResponse(req, filePath);
                     return Task.FromResult<IActionResult>(new FileStreamResult(stream, GetMimeType(filePath))
                     {
                         LastModified = File.GetLastWriteTime(filePath)

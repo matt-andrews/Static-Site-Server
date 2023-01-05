@@ -15,11 +15,11 @@ namespace StaticSiteServer
             headers.Invoke(headerService);
 
             return services
-                .AddScoped<ISiteConfiguration, SiteConfiguration>()
-                .AddScoped<ISiteService, SiteService>()
+                .AddSingleton<ISiteConfiguration, SiteConfiguration>()
+                .AddSingleton<ISiteService, SiteService>()
                 .AddSingleton<ISiteHeaderService>(headerService);
         }
-        public static IServiceCollection AddStaticServing(this IServiceCollection services)
+        public static IServiceCollection AddStaticSiteServing(this IServiceCollection services)
         {
             return services.AddStaticSiteServing(o => { });
         }

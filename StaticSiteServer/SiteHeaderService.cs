@@ -14,7 +14,7 @@ namespace StaticSiteServer
         {
             _response = arr;
         }
-        public void AddHeadersToRequest(HttpRequest req, string filePath)
+        public void AddHeadersToResponse(HttpRequest req, string filePath)
         {
             if (_response is null)
                 return;
@@ -30,6 +30,6 @@ namespace StaticSiteServer
     public interface ISiteHeaderService
     {
         void AddResponseHeader(params SiteHeaderFilter[] arr);
-        void AddHeadersToRequest(HttpRequest req, string filePath);
+        void AddHeadersToResponse(HttpRequest req, string filePath);
     }
 }
