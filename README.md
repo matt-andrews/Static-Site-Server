@@ -19,8 +19,6 @@ Add the dependencies to your DI container `builder.Services.AddStaticSiteServing
   }
 }
 ```
-And add this environment variable to your local.settings.json `"AzureWebJobsDisableHomepage": true`
-
 Add your static server function(s):
 ```
 public class Function1
